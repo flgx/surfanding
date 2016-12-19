@@ -1,19 +1,8 @@
 <template>
-        <div class="col s12 m3">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://placeimg.com/640/480/nature">
-              <span class="card-title">{{product.title}}</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>         
+<div>
+  
+  <app-product v-for="product in products" :product="product"></app-product>  
+</div>      
 </template>
 <style scoped>
 	h4{
@@ -23,7 +12,19 @@
 	}
 </style>
 <script>
+  import Product from './Product.vue';
   export default{
-    props:['product']
+    data(){
+      return{       
+        products:[
+          {id:1,category:'surfboards',price:2000,title:'All Merick 5,8',status:'new',user:'fraan.mp@gmail.com'},
+          {id:2,category:'surfboards',price:2000,title:'Angel 5,2',status:'new',user:'fraan.mp@gmail.com'},
+          {id:3,category:'surfboards',price:2000,title:'Birband 5,10',status:'used',user:'fraan.mp@gmail.com'},
+          ]
+      }
+    },
+    components:{
+      appProduct: Product
+    }
   }
 </script>

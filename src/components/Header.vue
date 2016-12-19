@@ -5,11 +5,8 @@
 	      <a href="#" class="brand-logo"><img src="src/assets/mylogo.png" width="50" height="50" class="responsive-img" alt="Surfshop online Argentina"><span>Surfando</span></a>
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	      <ul class="right hide-on-med-and-down">
-	        <li><a href="sass.html">Shortboards</a></li>
-	        <li><a href="badges.html">Fundboards</a></li>
-	        <li><a href="collapsible.html">Longboards</a></li>
-	        <li><a href="mobile.html">BodyBoards</a></li>
-	        <li><a href="mobile.html">Accesorios</a></li>
+            <router-link to="/" activeClass="active" tag="li"><a>Products</a></router-link>
+            <router-link to="/profile" activeClass="active" tag="li"><a>Profile</a></router-link>
 	      </ul>
 	      <ul class="side-nav" id="mobile-demo">
 	        <li><a href="sass.html">Shortboards</a></li>
