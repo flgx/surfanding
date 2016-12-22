@@ -1,4 +1,4 @@
-<template>	
+<template>
         <div class="col s12 m3">
           <div class="card">
             <div class="card-image">
@@ -6,18 +6,36 @@
               <span class="card-title">{{product.title}}</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>{{product.description}}</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+                <router-link :to="sluggable" activeClass="active" tag="li"><a>CONTACTO</a></router-link>
             </div>
           </div>
         </div> 
 </template>
-
+<style>
+  .card-action li{
+    list-style: none;  
+  }
+</style>
 <script>
 	export default {
-		props:['product']
+		props:['product','status'],
+    data(){
+      return {
+        slug: '',
+        link:''
+      }
+    },
+    computed:{
+      sluggable() {
+          return  'surfshop'+'/'+ this.product.category + '/' + this.product.title
+          .toLowerCase()
+          .replace(/ /g,'-')
+          .replace(',','-')
+          .replace(/[^\w-]+/g,'')
+      }
+    }
 	}
 </script>

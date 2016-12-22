@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-
 import App from './App.vue'
 import { routes } from './routes';
 import store from './store/store';
-
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
@@ -17,6 +18,7 @@ Vue.filter('currency', (value) => {
 
 const router = new VueRouter({
   mode: 'history',
+  base: __dirname,
   routes
 });
 
@@ -25,4 +27,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-})
+});
