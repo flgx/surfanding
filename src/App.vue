@@ -12,16 +12,9 @@
 <script>
 import Header from './components/Header.vue';
 export default {
-  data(){
-    return{       
-      products:[
-        {id:1,category:'surfboards',price:2000,title:'All Merick 5,8',status:'new',user:'fraan.mp@gmail.com'},
-        {id:2,category:'surfboards',price:2000,title:'Angel 5,2',status:'new',user:'fraan.mp@gmail.com'},
-        {id:3,category:'surfboards',price:2000,title:'Birband 5,10',status:'used',user:'fraan.mp@gmail.com'},
-        {id:4,category:'surfboards',price:2000,title:'Birband 5,10',status:'used',user:'fraan.mp@gmail.com'},
-      ]
-    }
-  },
+    created(){
+        this.$store.dispatch('setProducts');
+    },
 	components:{
 		appHeader: Header
 	}

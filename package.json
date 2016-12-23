@@ -12,6 +12,7 @@
     "font-awesome": "^4.7.0",
     "materialize-css": "^0.97.8",
     "vue": "^2.1.0",
+    "vue-material": "^0.5.1",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.1.1",
     "vuex": "^2.1.1"

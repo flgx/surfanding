@@ -29,7 +29,7 @@
 </template>
 <style scoped>
 	.my-blue{
-		background-color:#212121 ;
+		background-color:#37474f;
 	}
 	.brand-logo{
 		font-family: 'Passion One', cursive;

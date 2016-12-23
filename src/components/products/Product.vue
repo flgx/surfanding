@@ -6,6 +6,7 @@
               <span class="card-title">{{product.title}}</span>
             </div>
             <div class="card-content">
+              <small>Descripcion: </small>
               <p>{{product.description}}</p>
             </div>
             <div class="card-action">

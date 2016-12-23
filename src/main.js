@@ -4,12 +4,8 @@ import VueResource from 'vue-resource';
 import App from './App.vue'
 import { routes } from './routes';
 import store from './store/store';
-global.jQuery = require('jquery');
-var $ = global.jQuery;
-window.$ = $;
 Vue.use(VueRouter);
 Vue.use(VueResource);
-
 Vue.http.options.root = 'https://vuejs-stock-trader.firebaseio.com/';
 
 Vue.filter('currency', (value) => {
